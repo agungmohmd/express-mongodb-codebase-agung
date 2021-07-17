@@ -1,0 +1,284 @@
+{
+	"info": {
+		"_postman_id": "811dae9c-f713-4e24-9ca7-bfee44106b51",
+		"name": "MongodbBase",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "username2",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "user2@users.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "user12345",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/user/register",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "user1@users.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "user12345",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/user/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "test token on posts ",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGYyNjdlODQwNjcyYTFhYTQyYTk0ZjIiLCJuYW1lIjoiYWRtaW4xIiwiZW1haWwiOiJhZG1pbjFAYWRtaW4uY29tIiwicm9sZW5vIjoiMiIsImlhdCI6MTYyNjQ5OTA5Mn0.YNB5p7OSxkF5_10b-sJ_i1Xs1qkkyQruK3B1JDdiVZ0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/posts/post-test",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"posts",
+						"post-test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post a posts",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGYyNjdlODQwNjcyYTFhYTQyYTk0ZjIiLCJuYW1lIjoiYWRtaW4xIiwiZW1haWwiOiJhZG1pbjFAYWRtaW4uY29tIiwicm9sZW5vIjoiMiIsImlhdCI6MTYyNjQ5OTA5Mn0.YNB5p7OSxkF5_10b-sJ_i1Xs1qkkyQruK3B1JDdiVZ0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "the post no. 2",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "this is the posts no 2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/posts/posts",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"posts",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all posts",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGYyNjdlODQwNjcyYTFhYTQyYTk0ZjIiLCJuYW1lIjoiYWRtaW4xIiwiZW1haWwiOiJhZG1pbjFAYWRtaW4uY29tIiwicm9sZW5vIjoiMiIsImlhdCI6MTYyNjQ5OTA5Mn0.YNB5p7OSxkF5_10b-sJ_i1Xs1qkkyQruK3B1JDdiVZ0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/posts/posts",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"posts",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get posts by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGYyNjdlODQwNjcyYTFhYTQyYTk0ZjIiLCJuYW1lIjoiYWRtaW4xIiwiZW1haWwiOiJhZG1pbjFAYWRtaW4uY29tIiwicm9sZW5vIjoiMiIsImlhdCI6MTYyNjQ5OTA5Mn0.YNB5p7OSxkF5_10b-sJ_i1Xs1qkkyQruK3B1JDdiVZ0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/posts/posts/60f2698911e88f2c706c490a",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"posts",
+						"posts",
+						"60f2698911e88f2c706c490a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update a posts",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGYyNjdlODQwNjcyYTFhYTQyYTk0ZjIiLCJuYW1lIjoiYWRtaW4xIiwiZW1haWwiOiJhZG1pbjFAYWRtaW4uY29tIiwicm9sZW5vIjoiMiIsImlhdCI6MTYyNjQ5OTA5Mn0.YNB5p7OSxkF5_10b-sJ_i1Xs1qkkyQruK3B1JDdiVZ0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "description",
+							"value": "the description for posts number 2 is changed like this",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/posts/posts/60f2698911e88f2c706c490a",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"posts",
+						"posts",
+						"60f2698911e88f2c706c490a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete a posts",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGYyNjdlODQwNjcyYTFhYTQyYTk0ZjIiLCJuYW1lIjoiYWRtaW4xIiwiZW1haWwiOiJhZG1pbjFAYWRtaW4uY29tIiwicm9sZW5vIjoiMiIsImlhdCI6MTYyNjQ5OTA5Mn0.YNB5p7OSxkF5_10b-sJ_i1Xs1qkkyQruK3B1JDdiVZ0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/posts/posts/60f26ad0197b7e2ccc0db00c",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"posts",
+						"posts",
+						"60f26ad0197b7e2ccc0db00c"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
